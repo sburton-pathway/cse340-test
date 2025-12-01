@@ -1,0 +1,19 @@
+{
+  "name": "cse340-student",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --env-file=.env server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3"
+  }
+}

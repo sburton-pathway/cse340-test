@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<main>
+    <h1><%= title %></h1>
+    <!-- Put your page-specific content here -->
+    <p>Service Categories</p>
+    <ul>
+        <% if (categories && categories.length > 0) { %>
+            <% categories.forEach(function(category) { %>
+                <li><strong><%= category.name %></strong>: <%= category.description %></li>
+            <% }); %>
+        <% } %>
+
+    </ul>
+</main>
+<%- include('partials/footer') %>

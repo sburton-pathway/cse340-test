@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+<main>
+    <h1><%= title %></h1>
+    <!-- Put your page-specific content here -->
+    <p>Current projects</p>
+    <ul>
+        <% if (projects && projects.length >0) { %>
+            <% projects.forEach(function(project) { %>
+                <li><%= project.title %> &ndash; <em><%= project.organization_name %></em></li>
+            <% }); %>
+        <% } %>
+    </ul>
+</main>
+<%- include('partials/footer') %>
