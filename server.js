@@ -2,10 +2,10 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { testConnection } from './src/models/db.js';
-import { getAllOrganizations } from './src/models/organizations.js';
-import { getAllProjects } from './src/models/projects.js';
-import { getAllCategories } from './src/models/categories.js';
+// import { testConnection } from './src/models/db.js';
+// import { getAllOrganizations } from './src/models/organizations.js';
+// import { getAllProjects } from './src/models/projects.js';
+// import { getAllCategories } from './src/models/categories.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,7 +38,8 @@ app.get('/', (req, res) => {
 
 app.get('/partners', async (req, res) => {
 
-    const organizations = await getAllOrganizations();
+    // const organizations = await getAllOrganizations();
+    const organizations = []; // Placeholder until the actual function is uncommented
     const title = 'Our Partners';
 
     res.render('partners', { title, organizations });
@@ -46,14 +47,16 @@ app.get('/partners', async (req, res) => {
 
 app.get('/projects', async (req, res) => {
     
-    const projects = await getAllProjects();
+    // const projects = await getAllProjects();
+    const projects = []; // Placeholder until the actual function is uncommented
     const title = 'Service Projects';
     res.render('projects', { title, projects });
 });
 
 app.get('/categories', async (req, res) => {
     
-    const categories = await getAllCategories();
+    // const categories = await getAllCategories();
+    const categories = []; // Placeholder until the actual function is uncommented
     const title = 'Service Categories';
     res.render('categories', { title, categories });
 });
@@ -61,8 +64,8 @@ app.get('/categories', async (req, res) => {
 // Start the server and listen on the specified port
 app.listen(PORT, async () => {
     try {
-        console.log(`DB_URL: ${process.env.DB_URL}`);
-        await testConnection();
+        // console.log(`DB_URL: ${process.env.DB_URL}`);
+        // await testConnection();
         console.log(`Server is running on http://127.0.0.1:${PORT}`);
     } catch (error) {
         console.error('Database setup failed:', error.message);
