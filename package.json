@@ -7,7 +7,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --env-file=.env server.js",
+    "dev": "nodemon",
     "start": "node server.js"
   },
   "dependencies": {

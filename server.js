@@ -64,7 +64,7 @@ app.get('/categories', async (req, res) => {
 // Start the server and listen on the specified port
 app.listen(PORT, async () => {
     try {
-        // console.log(`DB_URL: ${process.env.DB_URL}`);
+        console.log(`DB_URL: ${process.env.DB_URL}`);
         // await testConnection();
         console.log(`Server is running on http://127.0.0.1:${PORT}`);
     } catch (error) {
